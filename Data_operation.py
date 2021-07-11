@@ -34,6 +34,32 @@ Data operation with stats. In this situation we have test result of student of c
 max marks for each test and min marks for each test.
 """
 
+test_1 = [27,28,29,30,21]
+test_2 = [28,29,26,21,29]
+names = ['amit','sachin','archit','shreya','ayushi']
+
+result = pd.DataFrame("test_1":test_1,"test_2":test_2,index=names)
+
+result.max()
+result.min()
+result.mean()
+
+"""
+we neeed to create a dataframe and then Group by last name. we need to create two columns first name and last name. Then we need to group by last name. 
+"""
+
+first_name_list = ['archit','shreya','ayushi','amit','smita']
+last_name_list = ['Rai','sharma','Rai','rastogi','kumari']
+
+df = pd.DataFrame("first_name_list":first_name_list,"first_name_list":last_name_list)
+
+df_groupby = df.groupBy('last_name')
+df_get_rai = df_groupBy.get_group('Rai')
+
+"""
+
+"""
+
 
   
   
