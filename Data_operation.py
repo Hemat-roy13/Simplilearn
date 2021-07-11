@@ -57,9 +57,15 @@ df_groupby = df.groupBy('last_name')
 df_get_rai = df_groupBy.get_group('Rai')
 
 """
-
+Sorting by firstname
 """
 
+first_name_list = ['archit','shreya','ayushi','amit','smita']
+last_name_list = ['Rai','sharma','Rai','rastogi','kumari']
+
+df = pd.DataFrame("first_name_list":first_name_list,"first_name_list":last_name_list)
+
+df.sort_values('first_name_list')
 
   
   
