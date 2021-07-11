@@ -1,0 +1,59 @@
+import numpy as np
+import pandas as pd
+
+"""
+Creating First Series
+"""
+
+first_series = pd.Series(list('abcdef'))
+print(first_series)
+
+"""
+Creating a series from ndarray
+"""
+
+ndarray = np.array([1,2,3,4,5,6,7,8,9])
+pandas_from_array = pd.Series(ndarray)
+print (pandas_from_array)
+
+"""
+Creating a Series from dict
+"""
+
+dict_data_1 = ["a","b","c","d","e","f","g"]
+dict_data_1 = [1,2,3,4,5,6,7]
+
+Series_from_dict_data = pd.Series(dict_data_1,index=dict_data_2)
+print(Series_from_dict_data)
+
+"""
+Creating a Series from Scalar
+"""
+
+d1 = pd.Series(5,index=[a,b,c,d])
+print (d1)
+
+"""
+Accessing Element of dataframe
+"""
+
+d1[0]                   # printing the first element
+d1[0:3]                 # print the first and second element
+d1.loc['a']             # printing the value of key a
+d1.iloc[0]              # printing the first element
+
+"""
+Vectorization of series 
+"""
+
+d1= pd.Series([1,2,3,4,5,6,7,8,9],index=[a,b,c,d,e,f,g,h,i])
+d2 = pd.Series([11,12,13,14,15,16,17,18,19],index=[a,b,c,d,e,f,g,h,i])
+d1+d2
+d3 = pd.Series([11,12,13,14,15,16,17,18,19],index=[a,b,c,d,e,j,q,w,e])
+d1+d3
+
+"""
+=================================== DataFrame =====================================
+"""
+
+
