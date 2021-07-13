@@ -26,8 +26,10 @@ exeuteSQL.commit()
 
 SQL_query = executeSQl.execute("select * from student")
 
-resultset = SQL_Query.fetchall()
+resultset = SQL_query.fetchall()
 resultset
 
-df_students_records = pd.DataFrmae(resultset,columns=zip(*SQL_Query.description)[0])
+df_students_records = pd.DataFrmae(resultset,columns=zip(*SQL_query.description)[0])
 df_students_records
+
+df = pd.DataFrame(SQL_query.fetchall())
