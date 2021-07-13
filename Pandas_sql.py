@@ -28,3 +28,6 @@ SQL_query = executeSQl.execute("select * from student")
 
 resultset = SQL_Query.fetchall()
 resultset
+
+df_students_records = pd.DataFrmae(resultset,columns=zip(*SQL_Query.description)[0])
+df_students_records
